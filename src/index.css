@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: #ededed;
+}
+
+.container{
+    width: 90%;
+    max-width: 1400px;
+    margin-top: 5rem;
+}
+
+*{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.title{
+    font-weight: 800;
+}
+
+.subtitle{
+    font-weight: 600;
+    transition: .3s linear;
+}
+
+.texto{
+    font-weight: 300;
+    transition: .3s linear;
+}
+
+.form{
+    width: 100%;
+    max-width: 55rem;
+    padding: 4rem;
+}
+.input{
+    border: 2px solid rgb(230, 230, 230);
+}
+.input:focus{
+    outline: 1px solid rgb(200, 200, 200);
+}
+textarea{
+    display: flex;
+    min-height: 4.5rem;
+    height: 4.5rem;
+    max-height: 10rem;
+}
+.section-pacientes{
+    flex-grow: 1;
+}
+.btn{
+    transition:  .3s linear;
+}
