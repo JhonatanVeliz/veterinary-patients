@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
-import { Formulario } from "./Formulario";
-import { Paciente } from "./Paciente";
+import { Formulario } from "./Formulario.jsx";
+import { Paciente } from "./Paciente.jsx";
 
 export const Grid = () => {
 
