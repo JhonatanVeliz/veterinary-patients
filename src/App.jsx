@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Header } from "./components/Header.jsx";
-import { Grid } from "./components/Grid.jsx";
+import { Header } from "./components/Header";
+import { Grid } from "./components/Grid";
 
 export const App = () => {
 
