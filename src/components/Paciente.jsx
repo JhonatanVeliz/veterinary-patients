@@ -8,6 +8,7 @@ export const Paciente = (childs) => {
     const eliminarPaciente = (pacienteId) => {
         const eliminar = paciente.filter( ({id}) =>  id !== pacienteId);
         setPaciente(eliminar);
+        localStorage.removeItem(pacienteId);
     }
 
     const editarPaciente = (pacienteId) => {
@@ -20,17 +21,38 @@ export const Paciente = (childs) => {
         setAlta(alta);
         setSintoma(sintoma);
         setBtnAddPaciente('Actualizar Paciente');
+
+        setPaciente(pacienteEditar[0]);
+        eliminarPaciente(id)
     }
 
     useEffect(() => {
+
         if (Object.keys(paciente).length > 0) {
             setTituloPacientes(`Pacientes actuales: ${paciente.length}`);
             setHayPaciente('Tus pacientes');
+            localStorage.setItem(paciente[0].id, JSON.stringify(paciente));
+
         }else if(Object.keys(paciente).length === 0){
             setTituloPacientes('No hay Pacientes');
             setHayPaciente('Comienza agregando pacientes y');
         }
+
     }, [paciente]);
+
+    const getPacientesStorage = () => {
+        const dataStorage = localStorage;
+
+        Object.values(dataStorage).forEach((paciente, index) => {
+            const datosPaciente = JSON.parse(paciente);
+            
+            if(datosPaciente[index].mascota) return setPaciente(datosPaciente);
+        })
+    }
+
+    useEffect(() => {
+        getPacientesStorage();
+    }, []);
 
     return (
         <section className='section-pacientes'>

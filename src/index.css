@@ -32,11 +32,11 @@ body{
 
 .form{
     width: 100%;
-    max-width: 55rem;
-    padding: 4rem;
+    padding: 3rem;
 }
 .input{
     border: 2px solid rgb(230, 230, 230);
+    width: 100%;
 }
 .input:focus{
     outline: 1px solid rgb(200, 200, 200);
@@ -52,4 +52,12 @@ textarea{
 }
 .btn{
     transition:  .3s linear;
+}
+
+@media screen and (min-width: 1024px) {
+    .form{
+        width: 100%;
+        max-width: 55rem;
+        padding: 4rem;
+    }
 }

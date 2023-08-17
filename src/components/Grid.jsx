@@ -17,7 +17,7 @@ export const Grid = () => {
     const [tituloPacientes, setTituloPacientes] = useState('');
 
   return (
-    <div className='flex justify-between gap-8'>
+    <div className='flex flex-col justify-between lg:flex-row gap-8'>
 
         <Formulario 
         setPaciente={setPaciente}
