@@ -6,6 +6,7 @@ import { Paciente } from "./Paciente";
 export const Grid = () => {
 
     const [paciente, setPaciente] = useState([]);
+    const [pacienteEditar, setPacienteEditar] = useState({});
     const [btnAddPaciente, setBtnAddPaciente] = useState('agregar paciente');
     const [hayPaciente, setHayPaciente] = useState('');
 
@@ -21,11 +22,13 @@ export const Grid = () => {
 
         <Formulario 
         setPaciente={setPaciente}
+        paciente={paciente}
         mascota={mascota} setMascota={setMascota}
         propietario={propietario} setPropietario={setPropietario}
         email={email} setEmail={setEmail}
         alta={alta} setAlta={setAlta}
         sintoma={sintoma} setSintoma={setSintoma}
+        pacienteEditar={pacienteEditar}
         btnAddPaciente={btnAddPaciente}
         setBtnAddPaciente={setBtnAddPaciente}
         />
@@ -34,6 +37,7 @@ export const Grid = () => {
         setTituloPacientes={setTituloPacientes} 
         paciente={paciente} 
         setPaciente={setPaciente}
+        setPacienteEditar={setPacienteEditar}
         hayPaciente={hayPaciente}
         setHayPaciente={setHayPaciente}
 

@@ -61,3 +61,14 @@ textarea{
         padding: 4rem;
     }
 }
+@media screen and (max-width: 355px) {
+    .paciente_card{
+        width: 100%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .paciente__titulo{
+        font-size: 1.4rem;
+    }
+}
